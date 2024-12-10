@@ -1,0 +1,30 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f9fafc;
+      font-family: Arial, sans-serif;
+    }
+    .debug-container {
+      text-align: center;
+      background: #ffe4b5;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .debug-container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    .debug-container p {
+      font-size: 1.2rem;
+      color: #555;
+    }

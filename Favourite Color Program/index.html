@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Favourite Color Program</title>
+</head>
+<body>
+
+    <!-- A paragraph to display the user's favorite color -->
+    <p id="demo"></p>
+
+    <script>
+        // Introductory message displayed using document.write()
+        document.write("<h1>Favourite Color Program</h1>");
+
+        // Prompt the user to enter their favorite color
+        let color = prompt("Enter your favourite color:");
+
+        // Function to return a personalized message based on the color input
+        function getColorMessage(colorInput) {
+            return "Wow! Your favorite color is " + colorInput + "!";
+        }
+
+        // Store the result message in a variable
+        let resultMessage = getColorMessage(color);
+
+        // Display the message in an alert
+        alert(resultMessage);
+
+        // Display the message on the webpage using innerHTML
+        document.getElementById('demo').innerHTML = resultMessage;
+    </script>
+</body>
+</html>

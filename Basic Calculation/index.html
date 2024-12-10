@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Basic Calculator</title>
+    
+</head>
+
+<body>
+    <!-- Placeholder for the result -->
+    <h1>Basic Calculator</h1>
+    <p id="result"></p>
+
+    <script>
+        // Introduce the program using document.write()
+        document.write('<div class="program-intro">Welcome to the Basic Calculator Program!<br><br></div>');
+
+        // Prompt the user for the first number
+        let num1 = parseFloat(prompt("Enter the first number:"));
+
+        // Prompt the user for the second number
+        let num2 = parseFloat(prompt("Enter the second number:"));
+
+        // Function to add two numbers
+        function add(a, b) {
+            return a + b; // Returns the sum
+        }
+
+        // Call the add function and store the result
+        let result = add(num1, num2);
+
+        // Display the result in an alert
+        alert("The result is: " + result);
+
+        // Display the result on the webpage
+        document.getElementById("result").innerHTML =
+            "The sum of " + num1 + " and " + num2 + " is: " + result;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Age Check</title>
+  
+</head>
+<body>
+
+    <div class="container">
+        <h2>Age Check</h2>
+        <button class="btn" onclick="checkAge()">Check Eligibility</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+         
+        function checkAge() {
+            // Prompt user to enter their age
+            let num = parseInt(prompt("Enter your age"));
+
+            // Function to check voting eligibility
+            function ageCheck(age) {
+                if (age >= 18) {
+                    alert("You are eligible to vote!");
+                    return "You are eligible to vote!";
+                    
+                } else {
+                    alert("You are not eligible to vote!");
+                    return "You are not eligible to vote.";
+                }
+            }
+
+            // Call the function and store the result
+            let result = ageCheck(num);
+
+            // Display the result on the webpage
+            document.getElementById('demo').innerHTML = "Your age is " + num + ". <span class='alert-box'>" + result + "</span>";
+        }
+    </script>
+
+</body>
+</html>

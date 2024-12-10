@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Number Squaring</title>
+</head>
+
+<body>
+    <!-- Placeholder for the result -->
+    <h1>Number Squaring Program</h1>
+    <p id="demo"></p>
+
+    <script>
+        // Introduce the program using document.write()
+        document.write('<div class="program-intro">Welcome to the Number Squaring Program!<br><br></div>');
+
+        // Ask the user for a number
+        let user = parseFloat(prompt("Enter a number:"));
+
+        // Function to calculate the square of the number
+        function square(number) {
+            return number * number; // Returns the square of the number
+        }
+
+        // Calculate the square and store it in a variable
+        let result = square(user);
+
+        // Show the result in an alert
+        alert("The square of " + user + " is: " + result);
+
+        // Display the result on the webpage using innerHTML
+        document.getElementById("demo").innerHTML =
+            "The square of " + user + " is: " + result;
+    </script>
+</body>
+
+</html>

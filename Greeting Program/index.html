@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+    <title>Greeting Program</title>
+</head>
+
+<body>
+    <!-- A paragraph to display the greeting for the user -->
+    <p id="demo"></p>
+    <script>
+
+        // Prompt the user to enter their name
+        let user = prompt("Enter your name");
+
+
+        // function to display the greeting message
+        function greetings(msg) {
+
+            return "Hey hi!! " + msg + "," + " How are you? ";
+        }
+
+        // Store the result greeting in a variable
+        let result = greetings(user);
+
+
+        // Display the message in an alert
+        alert(result);
+
+
+        // Display the message on the webpage using innerHTML
+        let greeting = document.getElementById('demo').innerHTML = result;
+
+    </script>
+</body>
+
+</html>

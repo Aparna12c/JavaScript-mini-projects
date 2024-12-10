@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prompt and Alert</title>
+       
+</head>
+<body>
+    <h1>Welcome Message</h1>
+    <p id="greeting"></p> <!-- Placeholder to display the message -->
+
+    <script>
+        // Prompt the user for their name
+        let userName = prompt("Enter your name");
+
+        // Display the greeting in an alert
+        alert("How are you, " + userName + "?");
+
+        // Show the greeting on the browser (inside the paragraph)
+        document.getElementById("greeting").innerHTML = "Hello " + userName + ", welcome to the webpage!";
+    </script>
+</body>
+</html>

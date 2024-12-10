@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Favourite Movie</title> 
+</head>
+<body>
+    <h2>Favourite Movie Program</h2>
+    <p id="demo"></p>
+
+    <script>
+        // Display a welcome message on the page
+        document.write('<p class="welcome">Welcome to the Favorite Movie Program!</p>');
+
+        // Prompt to let the user enter their favorite movie
+        let movie = prompt("Enter your favorite movie:");
+
+        // Display the movie using alert
+        alert("Your favorite movie is " + movie);
+
+        // Display the movie name on the webpage
+        document.getElementById('demo').innerHTML = "Your favorite movie is: " + movie;
+    </script>
+</body>
+</html>

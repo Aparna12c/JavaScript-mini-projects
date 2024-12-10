@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <h2>Random Number Generator</h2>
+    <p id="demo"></p>
+
+    <script>
+        // Display the message on the webpage
+        document.getElementById("demo").innerHTML = "Program to Generate a Random Number";
+
+        // Prompt the user to enter the minimum and maximum values
+        let min = parseInt(prompt("Enter minimum value:"));
+        let max = parseInt(prompt("Enter maximum value:"));
+
+        // Validate user input to ensure min < max and both are numbers
+        if (isNaN(min) || isNaN(max) || min >= max) {
+            alert("Please enter valid numbers with minimum less than maximum.");
+        } else {
+            // Function to generate a random number within the given range
+            function generateRandomNumber(a, b) {
+                return Math.floor(Math.random() * (b - a + 1)) + a;
+            }
+
+            // Call the function and store the result
+            let randomNumber = generateRandomNumber(min, max);
+
+            // Display the result using alert and innerHTML
+            alert("Generated Random Number: " + randomNumber);
+            document.getElementById("demo").innerHTML += `<br>Random Number: ${randomNumber}`;
+        }
+    </script>
+</body>
+</html>
