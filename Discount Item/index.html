@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Discount Item</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        // Create an item object with properties
+        let item = {
+            name: "Shampoo",
+            price: 4000,
+            discount: 0.40, // discount as a decimal (40% = 0.40)
+            // Method to calculate the discounted price
+            amount: function() {
+                return this.price - (this.price * this.discount);
+            }
+        }
+
+        // Use 'const' to store the item object (this ensures immutability of the reference)
+        const store = item;
+
+        // Prompt the user to enter a discount percentage
+        let update = prompt("Enter the discount percentage (e.g., 40 for 40%):");
+        
+        // Convert the input to a decimal and update the discount property
+        store.discount = parseFloat(update) / 100;
+
+        // Calculate the discounted price using the method
+        let discountedPrice = store.amount();
+
+        // Display the results using alert
+        alert("Original Price: " + store.price + "\nDiscounted Price: " + discountedPrice);
+
+        // Show results on the webpage using innerHTML
+        document.getElementById('demo').innerHTML = 
+            "Original Price: " + store.price + "<br>" + 
+            "Discounted Price: " + discountedPrice;
+
+        // Display a message using document.write
+        document.write("The item '" + store.name + "' has an original price of " + store.price + " and a discounted price of " + discountedPrice);
+
+    </script>
+</body>
+
+</html>
