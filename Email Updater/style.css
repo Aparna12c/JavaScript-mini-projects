@@ -1,0 +1,116 @@
+/* General Page Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #111, #444);
+    transition: all 0.3s ease;
+}
+
+/* The main content container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    border: 1px solid #444;
+}
+
+/* Updated object display box */
+#demo {
+    font-size: 18px;
+    color: #ff8c00;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #333;
+    border-radius: 15px;
+    border: 1px solid #ff8c00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for updated object box */
+#demo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Neon effect for text */
+#demo {
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+}
+
+/* Glowing message below the updated object */
+body::after {
+    content: "Updated email: Check the box above!";
+    font-size: 20px;
+    color: #ff00ff;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Glowing animation for the text */
+@keyframes neon-glow {
+    0% {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    }
+    100% {
+        text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff, 0 0 35px #ff00ff;
+    }
+}
+
+/* Button Style */
+button {
+    background-color: #ff00ff;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #ff77ff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+    }
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    #demo {
+        font-size: 16px;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Update and Display Object Properties</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // Define the user object with let (change to const later for immutability)
+        const user = {
+            name: "Ahem",
+            age: 22,
+            email: "ahem123@gmail.com"
+        };
+
+        // Prompt the user to enter a new email
+        const userPrompt = prompt("Enter a new email:");
+
+        // Function to update the email property of the user object
+        function updateEmail(user, newEmail) {
+            user.email = newEmail; // Update the email property
+            return user;           // Return the updated object
+        }
+
+        // Call the function to update the email
+        const updatedUser = updateEmail(user, userPrompt);
+
+        // Show the updated object in an alert
+        alert("Updated User: " + JSON.stringify(updatedUser));
+
+        // Display the updated object on the webpage
+        document.getElementById('demo').innerHTML = 
+            `The updated object is: ${JSON.stringify(updatedUser)}`;
+
+        // Use document.write to display the updated email
+        document.write(`My updated email is: ${updatedUser.email}`);
+
+        /* 
+          Explanation:
+          1. Objects declared with const can have their properties updated because of object mutability.
+          2. Object mutability means you can modify the properties of an object, but you cannot reassign the object itself.
+          3. In this example, we updated the 'email' property of the user object without changing the object reference.
+        */
+    </script>
+</body>
+</html>
